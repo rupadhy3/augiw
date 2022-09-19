@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: graphql-gateway
+  namespace: NSNAME
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - NSNAME.HOSTDOMAIN
+    port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    tls:
+      credentialName: iwtls-secret
+      mode: SIMPLE

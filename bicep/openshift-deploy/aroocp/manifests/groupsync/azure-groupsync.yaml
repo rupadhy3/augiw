@@ -1,0 +1,44 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: GroupSync
+metadata:
+  annotations:
+  name: azure-groupsync
+  namespace: group-sync-operator
+spec:
+  providers:
+  - azure:
+      baseGroups:
+      - IW-AZU-ARO-ACL-MIP-ADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-PPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-PRD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-NPD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-PPD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-PRD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-PPD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-PRD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-NPD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-PPD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-PRD
+      credentialsSecret:
+        key: AZURE_CLIENT_SECRET
+        kind: Secret
+        name: azure-group-sync
+        namespace: group-sync-operator
+      groups:
+      - IW-AZU-ARO-ACL-MIP-ADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-PPD
+      - IW-AZU-ARO-ACL-MIP-ADMINS-PRD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-NPD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-PPD
+      - IW-AZU-ARO-ACL-MIP-APPDEVELOPERS-PRD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-NPD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-PPD
+      - IW-AZU-ARO-ACL-MIP-DEVOPSADMINS-PRD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-NPD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-PPD
+      - IW-AZU-ARO-ACL-MIP-VIEWERS-PRD
+    name: azure
+  schedule: '* * * * *'

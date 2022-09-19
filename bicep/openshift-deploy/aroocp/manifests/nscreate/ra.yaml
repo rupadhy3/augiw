@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: RequestAuthentication
+metadata:
+  name: jwt-iw
+  namespace: NSNAME
+spec:
+  jwtRules:
+  - forwardOriginalToken: true
+    issuer: https://sts.windows.net/60beb100-3973-4346-bd68-d1c4eb6f4c42/
+    jwksUri: https://login.microsoftonline.com/common/discovery/keys
+    outputPayloadToHeader: x-jwt
+  selector:
+    matchLabels:
+      app: SVCNAME

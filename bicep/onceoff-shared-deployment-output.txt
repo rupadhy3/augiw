@@ -1,0 +1,258 @@
+$ az deployment sub what-if --location 'northeurope' --template-file bicep-deplyments/onceOff-shared-deployment.bicep --parameters environment='SIT' location='northeurope' instancenum='001' clientObjectId4kv='b3736081-3f29-41c7-81ee-cfca495e526d'
+WARNING: A new Bicep release is available: v0.4.1318. Upgrade now by running "az bicep upgrade".
+Note: The result may contain false positive predictions (noise).
+You can help us improve the accuracy of the result by opening an issue here: https://aka.ms/WhatIfIssues
+
+Resource and property changes are indicated with this symbol:
+  + Create
+
+The deployment will update the following scopes
+
+Scope: /subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4
+
+  + resourceGroups/IWAZU-MIP-NPD-ARO-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-ARO-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-NPD-ARO-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-NPD-AROMNG-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-AROMNG-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-NPD-AROMNG-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-NPD-MGT-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-MGT-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-NPD-MGT-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-NPD-SHARED-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-SHARED-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-NPD-SHARED-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-PPD-ARO-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-PPD-ARO-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-PPD-ARO-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-PPD-AROMNG-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-PPD-AROMNG-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-PPD-AROMNG-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+  + resourceGroups/IWAZU-MIP-PPD-MGT-001 [2021-04-01]
+
+      apiVersion:   "2021-04-01"
+      id:           "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-PPD-MGT-001"
+      location:     "northeurope"
+      name:         "IWAZU-MIP-PPD-MGT-001"
+      tags.dept:    "infrastructure"
+      tags.env:     "SIT"
+      tags.project: "MIP"
+      tags.version: "001"
+      type:         "Microsoft.Resources/resourceGroups"
+
+Scope: /subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-SHARED-001
+
+  + Microsoft.KeyVault/vaults/IWAZUNPDKVT001 [2019-09-01]
+
+      apiVersion:                              "2019-09-01"
+      id:                                      "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-SHARED-001/providers/Microsoft.KeyVault/vaults/IWAZUNPDKVT001"
+      location:                                "northeurope"
+      name:                                    "IWAZUNPDKVT001"
+      properties.accessPolicies: [
+        0:
+
+          objectId:     "b3736081-3f29-41c7-81ee-cfca495e526d"
+          permissions.certificates: [
+            0: "all"
+          ]
+          permissions.keys: [
+            0: "all"
+          ]
+          permissions.secrets: [
+            0: "all"
+          ]
+          tenantId:     "fcf67057-50c9-4ad4-98f3-ffca64add9e9"
+
+      ]
+      properties.createMode:                   "default"
+      properties.enabledForDeployment:         true
+      properties.enabledForTemplateDeployment: true
+      properties.enablePurgeProtection:        true
+      properties.enableRbacAuthorization:      false
+      properties.enableSoftDelete:             true
+      properties.sku.family:                   "A"
+      properties.sku.name:                     "standard"
+      properties.softDeleteRetentionInDays:    7
+      properties.tenantId:                     "fcf67057-50c9-4ad4-98f3-ffca64add9e9"
+      tags.dept:                               "infrastructure"
+      tags.env:                                "SIT"
+      tags.project:                            "MIP"
+      tags.version:                            "001"
+      type:                                    "Microsoft.KeyVault/vaults"
+
+  + Microsoft.Network/virtualNetworks/IWAZUNPD-MIP-NET-003 [2021-05-01]
+
+      apiVersion:               "2021-05-01"
+      id:                       "/subscriptions/25e4e41e-a113-4802-9d1d-8a78a1dab5d4/resourceGroups/IWAZU-MIP-NPD-SHARED-001/providers/Microsoft.Network/virtualNetworks/IWAZUNPD-MIP-NET-003"
+      location:                 "northeurope"
+      name:                     "IWAZUNPD-MIP-NET-003"
+      properties.addressSpace.addressPrefixes: [
+        0: "10.80.0.0/16"
+      ]
+      properties.subnets: [
+        0:
+
+          name:                                         "IWAZUNPD-MIPAGW-SUB-003"
+          properties.addressPrefix:                     "10.80.3.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        1:
+
+          name:                                         "IWAZUNPD-MIPAOM-SUB-001"
+          properties.addressPrefix:                     "10.80.1.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Disabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        2:
+
+          name:                                         "IWAZUNPD-MIPAOW-SUB-002"
+          properties.addressPrefix:                     "10.80.2.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        3:
+
+          name:                                         "IWAZUNPD-MIPBAS-SUB-004"
+          properties.addressPrefix:                     "10.80.4.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        4:
+
+          name:                                         "IWAZUNPD-MIPMGT-SUB-005"
+          properties.addressPrefix:                     "10.80.5.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        5:
+
+          name:                                         "IWAZUPPD-MIPAOM-SUB-006"
+          properties.addressPrefix:                     "10.80.6.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Disabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        6:
+
+          name:                                         "IWAZUPPD-MIPAOW-SUB-007"
+          properties.addressPrefix:                     "10.80.7.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+        7:
+
+          name:                                         "IWAZUPPD-MIPMGT-SUB-008"
+          properties.addressPrefix:                     "10.80.8.0/24"
+          properties.privateEndpointNetworkPolicies:    "Enabled"
+          properties.privateLinkServiceNetworkPolicies: "Enabled"
+          properties.serviceEndpoints: [
+            0:
+
+              service: "Microsoft.ContainerRegistry"
+
+          ]
+
+      ]
+      tags.dept:                "infrastructure"
+      tags.env:                 "SIT"
+      tags.project:             "MIP"
+      tags.version:             "001"
+      type:                     "Microsoft.Network/virtualNetworks"
+
+Resource changes: 9 to create.

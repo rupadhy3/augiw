@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: graphql
+  namespace: NSNAME
+spec:
+  gateways:
+  - graphql-gateway
+  hosts:
+  - HOSTROUTE 
+  http:
+  - match:
+    - uri:
+        exact: GLP
+    route:
+    - destination:
+        host: SVCNAME
+        port:
+          number: SVCPORT

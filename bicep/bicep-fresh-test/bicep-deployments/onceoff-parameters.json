@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      // Global parameters used for naming of all resources
+      "prefix": {
+        "value": "IWAZU"
+      },
+      "project": {
+        "value": "MIP"
+      },
+      "instancenum": {
+        "value": "005"
+      },
+      "location": {
+        "value": "northeurope"
+      },
+      "environment": {
+        "value": "TST"
+      },
+      "kvSkuName": {
+        "value": "standard"
+      },
+      "clientObjectId4kv": {
+        "value": ""
+      },
+      "mysecrets": {
+        "value": [
+          {
+            "secretName": "clientObjectId",
+            "secretValue": "dummyClientObjectId"
+          },
+          {
+            "secretName": "aroRpObjectId",
+            "secretValue": "dummyAroRpObjectId"
+          },
+          {
+            "secretName": "pullSecret",
+            "secretValue": "dummyPullSecretvalue"
+          },
+          {
+            "secretName": "aroClientId",
+            "secretValue": "dummyAroClientId"
+          },
+          {
+            "secretName": "aroClientSecret",
+            "secretValue": "dummyAroClientSecret"
+          },
+          {
+            "secretName": "adminPassword",
+            "secretValue": "dummyAdminPassword"
+          },
+          {
+            "secretName": "mgmtApiCert",
+            "secretValue": "dummyMgmtApiCert"
+          },
+        ],
+      },
+      // Non-Prod CIDRs
+      "npdAOMCidr": {
+        "value": "10.86.32.0/24"    // for testing
+        //"value": "10.86.16.0/24"  // actual
+      },
+      "npdAOWCidr": {
+        "value": "10.86.33.0/24"    // for testing
+        //"value": "10.86.17.0/24"  // actual
+      },
+      "npdAGWCidr": {
+        "value": "10.86.47.0/24"    // for testing
+        //"value": "10.86.31.0/24"  // actual
+      },
+      "npdBASCidr": {
+        "value": "10.86.46.192/26"    // for testing
+        //"value": "10.86.30.192/26"  // actual
+      },
+      "npdMGTCidr": {
+        "value": "10.86.46.0/26"    // for testing
+        //"value": "10.86.30.0/26"  // actual
+      },
+      "npdDEVCidr": {
+        "value": "10.86.46.64/26"    // for testing
+        //"value": "10.86.30.64/26"  // actual
+      },
+      "ppdAOMCidr": {
+        "value": "10.86.34.0/24"    // for testing
+        //"value": "10.86.18.0/24"  // actual
+      },
+      "ppdAOWCidr": {
+        "value": "10.86.35.0/24"    // for testing
+        //"value": "10.86.19.0/24"  // actual
+      },
+      "npdAPICidr": {
+        "value": "10.86.45.0/27"    // for testing
+        //"value": "10.86.29.0/27"  // actual
+      },
+      "npdPVTCidr": {
+        "value": "10.86.46.128/26"    // for testing
+        //"value": "10.86.30.128/26"  // actual
+      },
+      "npdASPCidr": {
+        "value": "10.86.36.0/24"    // for testing
+        //"value": "10.86.20.0/24"  // actual
+      },
+      // Production CIDRs
+      "prdAOMCidr": {
+        "value": "10.86.0.0/24"  
+      },    
+      "prdAOWCidr": {
+        "value": "10.86.1.0/24" 
+      },    
+      "prdAGWCidr": {
+        "value": "10.86.15.0/24"
+      },
+      "prdBASCidr": {
+        "value": "10.86.14.192/26"
+      },
+      "prdMGTCidr": {
+        "value": "10.86.14.0/26"
+      },
+      "prdAPICidr": {
+        "value": "10.86.13.0/27"
+      },
+      "prdPVTCidr": {
+        "value": "10.86.14.128/26"
+      },
+      "prdASPCidr": {
+        "value": "10.86.2.0/26" 
+      }  
+    }
+  }

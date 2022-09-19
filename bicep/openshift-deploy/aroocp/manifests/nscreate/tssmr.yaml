@@ -1,0 +1,33 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"maistra.io/v1","kind":"ServiceMeshMemberRoll","metadata":{"annotations":{},"name":"default","namespace":"istio-system"},"spec":{"members":null}}
+  creationTimestamp: "2022-05-25T07:00:16Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 2
+  name: default
+  namespace: istio-system
+  resourceVersion: "328909"
+  uid: 2757550d-d580-45f9-aa1c-1daca82419b7
+spec: {}
+status:
+  annotations:
+    configuredMemberCount: 0/0
+    kialiName: kiali
+  conditions:
+  - lastTransitionTime: "2022-05-25T07:00:16Z"
+    message: All namespaces have been configured successfully
+    reason: Configured
+    status: "True"
+    type: Ready
+  configuredMembers: []
+  memberStatuses: []
+  members: []
+  meshGeneration: 1
+  meshReconciledVersion: 2.1.2-4.el8-1
+  observedGeneration: 2
+  pendingMembers: []
+  terminatingMembers: []

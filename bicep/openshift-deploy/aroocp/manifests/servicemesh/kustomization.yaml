@@ -1,0 +1,10 @@
+resources:
+  - es-ns.yaml
+  - es-operatorgroup.yaml
+  - es-subs.yaml
+  - istio-system-ns.yaml
+  - ja-subs.yaml
+  - kai-subs.yaml
+  - sm-subs.yaml
+  - smcp.yaml
+  - smmr.yaml

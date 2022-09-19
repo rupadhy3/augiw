@@ -1,0 +1,14 @@
+resources:
+  - servicemesh/es-ns.yaml
+  - servicemesh/es-operatorgroup.yaml
+  - servicemesh/es-subs.yaml
+  - servicemesh/istio-system-ns.yaml
+  - servicemesh/ja-subs.yaml
+  - servicemesh/kai-subs.yaml
+  - servicemesh/sm-subs.yaml
+  - groupsync/gs-ns.yaml
+  - groupsync/group-sync-operator-group.yaml
+  - groupsync/gs-subs.yaml
+  - nscreate/smcp.yaml
+  - nscreate/smmr.yaml
+  - groupsync/azure-groupsync.yaml

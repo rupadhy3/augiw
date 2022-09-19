@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "probeHost": {
+        "value": "irish-probe-demo"
+      },
+      "SSLCerts": {
+        "value": [
+          "mgmtapicert"
+        ]
+      },
+      "frontendPorts": {
+        "value": [
+          {
+            "Port": 80
+          },
+          {
+            "Port": 443
+          }
+        ]
+      },
+      "BackendHttp": {
+        "value": [
+          {
+            "Port": 443,
+            "Protocol": "https",
+            "CookieBasedAffinity": "Disabled",
+            "Hostname": "irish-test",
+            "RequestTimeout": 600,
+            "probeName": "appGwProbe"
+          }
+        ]
+      },
+      "Listeners": {
+        "value": [
+          {
+            "Port": 443,
+            "Protocol": "https",
+	    "BackendPort": "443",
+            "Cert": "mgmtapicert",
+            "Hostname": "mipnpd",
+            "Interface": "Public"
+          }
+        ]
+      }
+    }
+  }

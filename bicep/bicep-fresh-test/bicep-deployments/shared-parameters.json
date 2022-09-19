@@ -1,0 +1,131 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      // Global parameters used for naming of all resources
+      "prefix": {
+        "value": "IWAZU"
+      },
+      "project": {
+        "value": "MIP"
+      },
+      "instancenum": {
+        "value": ""
+      },
+      "location": {
+        "value": "northeurope"
+      },
+      "env": {
+        "value": ""
+      },
+      "addKVAccess": {
+        "value": false
+      },
+      "clientObjectId4kv": {
+        "value": ""
+      },
+
+      // ARO parameters
+      "apiServerVisibility": {
+        "value": "Private"
+      },
+      "ingressVisibility": {
+        "value": "Private"
+      },
+      "domain": {
+        "value": ""
+      },
+      "masterVmSku": {
+        "value": "Standard_D8s_v3"
+      },
+      "workerVmSku": {
+        "value": "Standard_E4s_v3"
+      },
+      "workerCount": {
+        "value": 3
+      },
+      "aroCreate": {
+        "value": false
+      },
+      "acrSku": {
+        "value": "Premium"
+      },
+      "publicIpDomainLabel": {
+        "value": ""
+      },
+
+      // APIM parameters
+      "publisherEmail": {
+        "value": "rakesh.upadhyay1@water.ie"
+      }, 
+      "publisherName": {
+        "value": "RU"
+      },
+      "apiSku": {
+        "value": "Developer"
+      },
+      "apiSkuCount": {
+        "value": 1
+      },
+      "apiVnetType": {
+        "value": "Internal"
+      },
+      // Storage parameters
+      "storageSku": {
+        "value": "Standard_ZRS"
+      },
+      "storageKind": {
+        "value": "StorageV2"
+      },
+
+      // App Gateway parameters
+      "probePath": {
+        "value": "/graphql?query=%7B__typename%7D"
+      },
+      //"aroAppUrl": {
+      //  "value": "apps.${domain}.northeurope.aroapp.io"
+      //},
+      "probeHost": {
+        "value": "graphql-test-https-graphql-test"
+      },
+      "SSLCerts": {
+        "value": [
+          "mipapicert"
+        ]
+      },
+      "frontendPorts": {
+        "value": [
+          {
+            "Port": 80
+          },
+          {
+            "Port": 443
+          }
+        ]
+      },
+      "BackendHttp": {
+        "value": [
+          {
+            "Port": 443,
+            "Protocol": "https",
+            "CookieBasedAffinity": "Disabled",
+            "Hostname": "iwazusitina002",
+            "RequestTimeout": 60,
+            "probeName": "appGwProbe"
+          }
+        ]
+      },
+      "Listeners": {
+        "value": [
+          {
+            "Port": 443,
+            "Protocol": "https",
+	          "BackendPort": "443",
+            "Cert": "mipapicert",
+            "Hostname": "mipnpd",
+            "Interface": "Public"
+          }
+        ]
+      }
+    }
+  }
